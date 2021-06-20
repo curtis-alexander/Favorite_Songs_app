@@ -29,4 +29,10 @@ class SongsController < ApplicationController
     song.save
     render json: song.as_json
   end
+
+  def destroy
+    song = Song.find_by(id: params[:id])
+    song.destroy
+    render json: { message: "its been done" }
+  end
 end
