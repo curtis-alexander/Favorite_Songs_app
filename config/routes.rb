@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get "/songs", controller: "songs", action: "index"
   post "/songs", controller: "songs", action: "create"
   get "/songs/:id", controller: "songs", action: "show"
+  patch "/songs/:id", controller: "songs", action: "update"
 end
